@@ -1,11 +1,11 @@
-package com.app;
+package com.app.models;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class plane implements  Vechicle {
+public class plane implements Vechicle {
     int id;
     String model;
     Type type = Type.plane;
@@ -23,7 +23,7 @@ public class plane implements  Vechicle {
     }
 
     @Override
-    public Type getType() {
+    public  Type getType() {
         return type;
     }
 

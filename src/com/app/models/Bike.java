@@ -1,36 +1,26 @@
-package com.app;
+package com.app.models;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class Car implements  Vechicle {
-
+public class Bike  implements Vechicle {
     int id;
     String model;
-    Type type = Type.car;
+    Type type = Type.bike;
 
-//    public Car( String model, Type type) {
-//
-//        this.model = model;
-//        this.type = type;
-//    }
-
+    @Override
     public int getId() {
         return id;
     }
 
-
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
+    @Override
     public String getModel() {
         return model;
     }
 
+    @Override
     public Type getType() {
         return type;
     }
@@ -38,10 +28,10 @@ public class Car implements  Vechicle {
     @Override
     public void setId(int id) {
         this.id =id;
-
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    @Override
+    public void setModel(String model) {
+        this.model = model;
     }
 }
